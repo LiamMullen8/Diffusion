@@ -3,7 +3,7 @@ g_size=int(input("Enter Grid Size:"))
 T_slice=int(input("Enter Time Slice:"))
 
 # this is so we can reference negatives
-Grid = [[0.0 for j in range(-g_size, g_size+1)] for i in range(-g_size, g_size+1)]
+Grid = [[[0.0 for j in range(-g_size, g_size+1)] for i in range(-g_size, g_size+1)] for N in range(0, T_slice+1)]
 print(Grid)
 print("+++++++++++++++++++++++++++++++\n")
 
@@ -12,6 +12,7 @@ def W(m,p,N):
 	# probability of moving in each direction
 	pl=pr=pu=pd=0.25
 
+	# only location possible at time=0 is (0,0)
 	if N==0:
 		if m==0 and p==0:
 			return 1.0
@@ -23,9 +24,10 @@ def W(m,p,N):
 	return w
 
 
-for i in range(-g_size, g_size+1):
-	for j in range(-g_size, g_size+1):
-		Grid[g_size - i][g_size - j] = W(i,j,T_slice)
+for T in range(0, T_slice+1):
+	for i in range(-g_size, g_size+1):
+		for j in range(-g_size, g_size+1):
+			Grid[T][g_size - i][g_size - j] = W(i,j,T)
 
 print(Grid)
 
