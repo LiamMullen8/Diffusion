@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+D4=int(input("Enter 4D Lim:"))
 def fourD(N):
 	T=[[0,0,0,0] for i in range(0, N)]
 
