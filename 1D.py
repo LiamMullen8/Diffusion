@@ -2,11 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 D1=int(input("Enter 1D Lim:"))
-D2=int(input("Enter 2D Lim:"))
-D3=int(input("Enter 3D Lim:"))
-D4=int(input("Enter 4D Lim:"))
-
-
 # 1-D random walk
 ##############################################
 
