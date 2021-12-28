@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+D2=int(input("Enter 2D Lim:"))
 def twoD(N):
 	T=[[0,0] for i in range(0, N)]
 
