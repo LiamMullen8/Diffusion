@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+D3=int(input("Enter 3D Lim:"))
 def threeD(N):
 	T=[[0,0,0] for i in range(0, N)]
 
